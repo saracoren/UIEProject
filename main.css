@@ -79,13 +79,14 @@ header {
     /* height: 1px; */
     font-size: 0.9125em;
     /* box-sizing: border-box; */
-    box-shadow: 0 10px 0 10px #fff inset;
+    /* box-shadow: 0 10px 8px 8px #fff inset; */
 }
 
 .page_container {
     width: 80%;
     margin: 0 auto;
     height: 100%;
+    max-width: 880px;
     background: #f5f3f0;
 }
 
@@ -150,23 +151,29 @@ button {
 .branding-bar {
     width: 80%;
     margin: 0 auto;
-    /* display: flex;
+    display: flex;
     flex-direction: row;
-    justify-content: space-between; */
+    justify-content: space-between;
+    max-width: 880px;
 }
 
-img {
-    width: 45%;
+.large-logo {
+    max-width: 425px;
     margin-top: 2.5em;
+}
+
+.large-logo img {
+    width: 100%;
+    height: auto;
 }
 
 .branding-bar p {
     /* margin: 0.4em 0 0; */
-    float: right;
+    /* float: right; */
     color: #efe9e0;
     font-size: 1.25em;
-    text-align: right;
-    display: block;
+    /* text-align: right; */
+    /* display: block; */
     margin-top: 2.25em;
     /* margin-block-start: 2.5em; */
     margin-block-end: 1em;
@@ -238,9 +245,15 @@ footer {
     margin: 0 auto;
     display: flex;
     flex-direction: row;
+    padding-top: 20px;
     /* background: greenyellow; */
     /* margin-top: 100px; */
     /* margin-bottom: 4em; */
+}
+
+.footer-email {
+    display: flex;
+    flex-direction: row;
 }
 
 .logo {
@@ -298,28 +311,45 @@ footer {
     /* margin-top: 10px; */
 }
 
+@media only screen and (max-width: 880px) {
+    .branding-bar {
+        display: flex;
+        flex-direction: column;
+    }
+    .branding-bar p {
+        padding-top: 0.6em;
+        font-size: 1em;
+        margin-top: 0;
+    }
+    .large-logo {
+        
+    }
+}
+
 @media only screen and (max-width: 640px) {
     .email-collect {
       text-align: center;
     }
+    .footer-div img {
+        width: 100%;
+        height: auto;
+        /* margin-left: 2em; */
+      }
+      .logo {
+          margin-bottom: 10px;
+      }
+      .footer-div {
+          flex-direction: column;
+          margin-top: 0;
+          margin-left: 2em;
+      }
+      footer {
+          height: 150px;
+      }
   }
 
-@media only screen and (max-width: 640px) {
-    .footer-div img {
-      width: 100%;
-      height: auto;
-      /* margin-left: 2em; */
-    }
-    .logo {
-        margin-bottom: 10px;
-    }
-    .footer-div {
-        flex-direction: column;
-        margin-top: 0;
-        margin-left: 2em;
-    }
-    footer {
-        height: 200px;
-    }
-}
-
+  @media only screen and (max-width: 440px) {
+      footer {
+          height: 175px;
+      }
+  }
