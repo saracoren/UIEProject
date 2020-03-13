@@ -70,7 +70,7 @@ ul {
 }
 
 header {
-    background:#5B5B69 url(/assets/background.jpg) no-repeat scroll 50% 50%;
+    background:#5B5B69 url(assets/background.jpg) no-repeat scroll 50% 50%;
     width: 100%;
     height: 150px;
     /* margin: 0px; */
